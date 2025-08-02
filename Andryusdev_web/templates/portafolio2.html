@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio profesional con diseño oscuro moderno">
+    <title>Andryus | Portafolio Profesional</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/dark-neon.css' %}">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body class="dark-theme">
+    <!-- Header/Navbar -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav__logo">ANDRYUS</div>
+            <ul class="nav__menu">
+                <li class="nav__item"><a href="#home" class="nav__link nav__link--active">Inicio</a></li>
+                <li class="nav__item"><a href="#about" class="nav__link">Sobre mí</a></li>
+                <li class="nav__item"><a href="#skills" class="nav__link">Habilidades</a></li>
+                <li class="nav__item"><a href="#projects" class="nav__link">Proyectos</a></li>
+                <li class="nav__item"><a href="#contact" class="nav__link">Contacto</a></li>
+            </ul>
+            <button class="nav__toggle" aria-label="Menú">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!-- Sección Hero -->
+        <section id="home" class="hero">
+            <div class="hero__content">
+                <div class="hero__text">
+                    <h1 class="hero__title">Hola, soy <span class="hero__title--highlight">Andryus</span></h1>
+                    <h2 class="hero__subtitle">Ingeniero Informático & Desarrollador Full Stack</h2>
+                    <p class="hero__description">Creo soluciones web innovadoras con tecnologías modernas y diseño impactante.</p>
+                    <div class="hero__buttons">
+                        <a href="#projects" class="button button--primary">Ver proyectos</a>
+                        <a href="#contact" class="button button--secondary">Contactar</a>
+                    </div>
+                </div>
+                <div class="hero__image">
+                    <div class="hero__img-container">
+                        <img src="img/profile.jpg" alt="Andryus - Desarrollador profesional" class="hero__img">
+                    </div>
+                    <div class="hero__badge">
+                        <span class="hero__badge-text">Disponible</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero__social">
+                <a href="#" class="hero__social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="hero__social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" class="hero__social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+            <a href="#about" class="hero__scroll" aria-label="Desplazarse hacia abajo">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </section>
+
+        <!-- Sección Sobre Mí -->
+        <section id="about" class="about section">
+            <div class="section__header">
+                <h2 class="section__title">Sobre <span class="section__title--highlight">mí</span></h2>
+                <p class="section__subtitle">Conoce más sobre mi trayectoria profesional</p>
+            </div>
+            <div class="about__content">
+                <div class="about__image">
+                    <div class="about__img-container">
+                        <img src="img/about.jpg" alt="Andryus trabajando" class="about__img">
+                    </div>
+                </div>
+                <div class="about__text">
+                    <h3 class="about__heading">Desarrollador apasionado con enfoque en soluciones eficientes</h3>
+                    <p class="about__paragraph">Especializado en desarrollo web full stack con más de 2 años de experiencia creando aplicaciones escalables y con excelente experiencia de usuario. Mi enfoque combina funcionalidad robusta con diseño atractivo.</p>
+                    <div class="about__experience">
+                        <div class="about__experience-item">
+                            <span class="about__experience-number">2+</span>
+                            <span class="about__experience-text">Años de experiencia</span>
+                        </div>
+                        <div class="about__experience-item">
+                            <span class="about__experience-number">15+</span>
+                            <span class="about__experience-text">Proyectos completados</span>
+                        </div>
+                        <div class="about__experience-item">
+                            <span class="about__experience-number">10+</span>
+                            <span class="about__experience-text">Clientes satisfechos</span>
+                        </div>
+                    </div>
+                    <a href="#" class="button button--primary">Descargar CV</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Habilidades -->
+        <section id="skills" class="skills section">
+            <div class="section__header">
+                <h2 class="section__title">Mis <span class="section__title--highlight">habilidades</span></h2>
+                <p class="section__subtitle">Tecnologías que domino y utilizo regularmente</p>
+            </div>
+            <div class="skills__grid">
+                <div class="skill-card">
+                    <div class="skill-card__icon">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <h3 class="skill-card__title">Python & Django</h3>
+                    <p class="skill-card__description">Desarrollo backend robusto con Django, Flask y conocimiento en IA básica.</p>
+                    <div class="skill-progress">
+                        <div class="skill-progress__bar" style="width: 90%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-card__icon">
+                        <i class="fab fa-js"></i>
+                    </div>
+                    <h3 class="skill-card__title">JavaScript</h3>
+                    <p class="skill-card__description">Interactividad web con ES6+, manipulación del DOM y conceptos fundamentales.</p>
+                    <div class="skill-progress">
+                        <div class="skill-progress__bar" style="width: 85%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-card__icon">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <h3 class="skill-card__title">HTML5 & CSS3</h3>
+                    <p class="skill-card__description">Maquetación semántica, responsive design y animaciones CSS.</p>
+                    <div class="skill-progress">
+                        <div class="skill-progress__bar" style="width: 95%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-card__icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3 class="skill-card__title">Bases de Datos</h3>
+                    <p class="skill-card__description">SQL (PostgreSQL, MySQL) y conocimientos básicos de MongoDB.</p>
+                    <div class="skill-progress">
+                        <div class="skill-progress__bar" style="width: 80%"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Proyectos -->
+        <section id="projects" class="projects section">
+            <div class="section__header">
+                <h2 class="section__title">Mis <span class="section__title--highlight">proyectos</span></h2>
+                <p class="section__subtitle">Algunos de mis trabajos recientes</p>
+            </div>
+            <div class="projects__grid">
+                <article class="project-card">
+                    <div class="project-card__image">
+                        <img src="img/project1.jpg" alt="Portafolio personal" class="project-card__img">
+                        <div class="project-card__overlay">
+                            <a href="#" class="project-card__view">Ver Demo</a>
+                        </div>
+                    </div>
+                    <div class="project-card__content">
+                        <h3 class="project-card__title">Portafolio Personal</h3>
+                        <p class="project-card__description">Sitio web responsive desarrollado con HTML5, CSS3 y JavaScript vanilla.</p>
+                        <div class="project-card__tags">
+                            <span class="project-card__tag">HTML</span>
+                            <span class="project-card__tag">CSS</span>
+                            <span class="project-card__tag">JavaScript</span>
+                        </div>
+                        <div class="project-card__buttons">
+                            <a href="#" class="button button--small button--primary">Ver demo</a>
+                            <a href="#" class="button button--small button--outline">Código fuente</a>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="project-card">
+                    <div class="project-card__image">
+                        <img src="img/project2.jpg" alt="Aplicación Django" class="project-card__img">
+                        <div class="project-card__overlay">
+                            <a href="#" class="project-card__view">Ver Demo</a>
+                        </div>
+                    </div>
+                    <div class="project-card__content">
+                        <h3 class="project-card__title">Sistema de Gestión</h3>
+                        <p class="project-card__description">Aplicación CRUD completa desarrollada con Django, PostgreSQL y autenticación de usuarios.</p>
+                        <div class="project-card__tags">
+                            <span class="project-card__tag">Django</span>
+                            <span class="project-card__tag">Python</span>
+                            <span class="project-card__tag">PostgreSQL</span>
+                        </div>
+                        <div class="project-card__buttons">
+                            <a href="#" class="button button--small button--primary">Ver demo</a>
+                            <a href="#" class="button button--small button--outline">Código fuente</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-card__image">
+                        <img src="img/project3.jpg" alt="E-commerce" class="project-card__img">
+                        <div class="project-card__overlay">
+                            <a href="#" class="project-card__view">Ver Demo</a>
+                        </div>
+                    </div>
+                    <div class="project-card__content">
+                        <h3 class="project-card__title">Tienda E-commerce</h3>
+                        <p class="project-card__description">Plataforma de comercio electrónico con carrito de compras y pasarela de pago.</p>
+                        <div class="project-card__tags">
+                            <span class="project-card__tag">React</span>
+                            <span class="project-card__tag">Node.js</span>
+                            <span class="project-card__tag">MongoDB</span>
+                        </div>
+                        <div class="project-card__buttons">
+                            <a href="#" class="button button--small button--primary">Ver demo</a>
+                            <a href="#" class="button button--small button--outline">Código fuente</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="projects__more">
+                <a href="#" class="button button--secondary">Ver todos los proyectos</a>
+            </div>
+        </section>
+
+        <!-- Sección Contacto -->
+        <section id="contact" class="contact section">
+            <div class="section__header">
+                <h2 class="section__title">Contáct<span class="section__title--highlight">ame</span></h2>
+                <p class="section__subtitle">¿Tienes un proyecto en mente? Hablemos</p>
+            </div>
+            <div class="contact__content">
+                <form class="contact-form">
+                    <div class="contact-form__group">
+                        <label for="name" class="contact-form__label">Nombre</label>
+                        <input type="text" id="name" class="contact-form__input" placeholder="Tu nombre" required>
+                    </div>
+                    <div class="contact-form__group">
+                        <label for="email" class="contact-form__label">Email</label>
+                        <input type="email" id="email" class="contact-form__input" placeholder="tu@email.com" required>
+                    </div>
+                    <div class="contact-form__group">
+                        <label for="message" class="contact-form__label">Mensaje</label>
+                        <textarea id="message" class="contact-form__textarea" placeholder="Tu mensaje..." required></textarea>
+                    </div>
+                    <button type="submit" class="button button--primary button--full">Enviar mensaje</button>
+                </form>
+                <div class="contact__info">
+                    <div class="contact-info__item">
+                        <i class="fas fa-envelope contact-info__icon"></i>
+                        <div class="contact-info__content">
+                            <h4 class="contact-info__title">Email</h4>
+                            <a href="mailto:contacto@andryus.com" class="contact-info__link">contacto@andryus.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-info__item">
+                        <i class="fas fa-map-marker-alt contact-info__icon"></i>
+                        <div class="contact-info__content">
+                            <h4 class="contact-info__title">Ubicación</h4>
+                            <p class="contact-info__text">Barcelona, España</p>
+                        </div>
+                    </div>
+                    <div class="contact-info__item">
+                        <i class="fas fa-phone-alt contact-info__icon"></i>
+                        <div class="contact-info__content">
+                            <h4 class="contact-info__title">Teléfono</h4>
+                            <a href="tel:+34123456789" class="contact-info__link">+34 123 456 789</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__content">
+            <div class="footer__brand">
+                <div class="footer__logo">ANDRYUS</div>
+                <p class="footer__slogan">Transformando ideas en soluciones digitales.</p>
+                <div class="footer__social-links">
+                    <a href="#" class="footer__social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="footer__social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" class="footer__social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer__links">
+                <h4 class="footer__title">Enlaces rápidos</h4>
+                <ul class="footer__menu">
+                    <li class="footer__item"><a href="#home" class="footer__link">Inicio</a></li>
+                    <li class="footer__item"><a href="#about" class="footer__link">Sobre mí</a></li>
+                    <li class="footer__item"><a href="#projects" class="footer__link">Proyectos</a></li>
+                    <li class="footer__item"><a href="#contact" class="footer__link">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer__newsletter">
+                <h4 class="footer__title">Newsletter</h4>
+                <p class="footer__text">Suscríbete para recibir actualizaciones sobre mis proyectos.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Tu email" class="newsletter-input" required>
+                    <button type="submit" class="button button--small button--primary">Suscribirse</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p class="footer__copyright">&copy; 2024 Andryus. Todos los derechos reservados.</p>
+            <p class="footer__credits">Diseñado y desarrollado con <i class="fas fa-heart"></i> por Andryus</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

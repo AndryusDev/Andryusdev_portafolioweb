@@ -1,0 +1,38 @@
+:root {
+
+
+    /* Espaciados */
+    --space-lg: 2rem;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.navbar {
+    position: fixed;
+    height: 100px;
+    width: 100%;
+    border: 5px solid red;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar__brand {
+}
+
+.navbar__menu-contenedor {
+    list-style-type: none;
+    display: flex;
+    gap: var(--space-lg);
+}
+
+.navbar__menu-iten {
+
+    
+}
