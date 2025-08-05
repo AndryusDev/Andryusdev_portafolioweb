@@ -1,4 +1,14 @@
 :root {
+    /* Colores principales */
+    --color-primary: #2563EB;       /* Azul profesional */
+    --color-primary-dark: #1D4ED8;  /* Azul oscuro */
+    --color-primary-light: #3B82F6; /* Azul claro */
+    --color-secondary: #10B981;     /* Verde para acentos */
+    --color-dark: #1F2937;         /* Gris oscuro para texto */
+    --color-gray: #6B7280;         /* Gris medio */
+    --color-light: #F3F4F6;        /* Gris claro */
+    --color-white: #FFFFFF;        /* Blanco */
+    --color-black: #111827;        /* Negro para textos */
 
 
     /* Espaciados */
@@ -8,22 +18,21 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
 }
 
-
-
-.navbar {
+.header {
     position: fixed;
-    height: 100px;
+    height: 75px;
     width: 100%;
-    border: 5px solid red;
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.navbar__brand {
+    padding: 1rem 1rem;
+    box-shadow:  1px 2px 10px rgba(0, 0, 0, 0.05);
+    z-index: 1000;
 }
 
 .navbar__menu-contenedor {
@@ -32,7 +41,77 @@ body {
     gap: var(--space-lg);
 }
 
-.navbar__menu-iten {
+.header__brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
 
+.navbar__menu-iten:hover, .fa-bars:hover {
+    color: var(--color-primary);
+}
+
+
+/* Botón de hamburguesa (pegado a la derecha) */
+.navbar__toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--color-dark);
+    padding: 0.5rem;
+    margin-right: -0.5rem; /* Lo pega al borde */
+    transition: transform 0.3s ease; /* Para la animación de giro */
+}
+
+/* Menú desplegable (ahora con ancho fijo y pegado a la derecha) */
+.navbar__menu-contenedor {
+    list-style: none;
+    display: flex;
+    gap: var(--space-lg);
+}
+
+/* Estilos para móvil */
+@media (max-width: 768px) {
+    .navbar__toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative; /* Añadido para control de z-index */
+        z-index: 1001; /* Mayor que el menú */
+    }
+
+    .navbar__menu-contenedor {
+        position: fixed;
+        top: 75px;
+        right: -100%; /* Inicialmente oculto (70% de ancho) */
+        width: 100%; /* Ancho del panel */
+        height: auto;
+        max-height: calc(100vh - 75px); /* Máximo alto disponible */
+        background: var(--color-white);
+        flex-direction: column;
+        gap: 1.5rem;
+        margin: 0;
+        transition: right 0.3s ease;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        align-items: center;
+        padding: 1rem 0; /* Padding reducido */
+        z-index: 1000; /* Debajo del botón pero sobre otros elementos */
+    }
     
+    .navbar__menu-contenedor.active {
+        right: 0; /* Se abre desde la derecha */
+    }
+
+    /* Mueve el botón junto al panel abierto */
+    .navbar__menu-contenedor.active ~ .navbar__toggle {
+        right: 70%; /* Se desplaza a la izquierda junto al menú */
+        position: fixed; /* Permite reposicionarlo */
+    }
+
+    /* Gira el icono al abrir */
+    .navbar__menu-contenedor.active ~ .navbar__toggle i {
+        transform: rotate(90deg);
+    }
 }
