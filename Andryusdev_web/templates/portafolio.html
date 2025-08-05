@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="{% static 'css/portafolio.css' %}">
         <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="{% static 'css/inicio.css' %}">
         <title>Andryusdev | Ingeniero en Informatica</title>
         <meta name="description" content="Portafolio de Andryus Guaiquirima, desarrollador web especialista en con CSS y Django">
         <meta name="author" content="Andryus Guaiquirima">
@@ -17,6 +18,9 @@
         <header class="header">
             {% include 'includes/header.html' %}
         </header>
+        <main>
+            {% include 'includes/sections/inicio.html' %}
+        </main>
         <footer>
             
         </footer>
