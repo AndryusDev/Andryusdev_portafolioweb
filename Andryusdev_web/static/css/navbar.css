@@ -69,6 +69,10 @@ body {
     color: var(--color-primary);
 }
 
+.fa-times {
+    color: red;
+}
+
 
 /* Botón de hamburguesa (pegado a la derecha) */
 .navbar__toggle {
@@ -80,9 +84,7 @@ body {
     color: var(--color-dark);
     padding: 0.5rem;
     margin-right: -0.5rem; /* Lo pega al borde */
-    transition: transform 0.3s ease; /* Para la animación de giro */
 }
-
 /* Menú desplegable (ahora con ancho fijo y pegado a la derecha) */
 .navbar__menu-contenedor {
     list-style: none;
@@ -92,10 +94,10 @@ body {
 
 .navbar__overlay {
     position: fixed;
-    top: 75px; /* Desde el borde inferior del header */
+    top: 0px; /* Desde el borde inferior del header */
     left: 0;
     width: 100%;
-    height: calc(100vh - 75px); /* Altura restante */
+    height: 100vh; /* Altura restante */
     background: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
     z-index: 998; /* Debajo del menú (1001) y header (1000) */
     opacity: 0;
@@ -116,10 +118,13 @@ body {
 
     .navbar__menu-contenedor {
         position: fixed;
+        box-sizing: border-box;
         top: 0px;
+        bottom: 0px;
         right: -100%; /* Inicialmente oculto (70% de ancho) */
-        width: 45%; /* Ancho del panel */
-        height: 100vh;
+        width: 35%; /* Ancho del panel */
+        height: 100%;
+        min-width: 150px; /* Tamaño mínimo absoluto */
         background: var(--color-white);
         flex-direction: column;
         gap: 1.5rem;
@@ -127,14 +132,20 @@ body {
         transition: right 0.3s ease;
         box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
         align-items: center;
-        padding: 1rem 0; /* Padding reducido */
+        padding: 1.5rem 1rem; /* Padding reducido */
         z-index: 1001; /* Debajo del botón pero sobre otros elementos */
+        overflow-y: auto;
     }
     
     .navbar__menu-contenedor.active {
         right: 0; /* Se abre desde la derecha */
         z-index: 1001;
         pointer-events: auto; /* Permite clicks para cerrar el menú */
+    }
+    .x {
+        width: 100%;
+        justify-content: right;
+        
     }
     .header {
         z-index: 1000;
