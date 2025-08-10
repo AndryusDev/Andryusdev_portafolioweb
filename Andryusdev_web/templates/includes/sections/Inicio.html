@@ -1,12 +1,22 @@
+{% load static%}
 <section>
     <div class="inicio__contenedor">
         <div class="inicio__contenedor-texto">
-            <h1 class="inicio__title">Hola, soy <span class="inicio__title--highlight">Andryus</span></h1>
+            <h1 class="inicio__title"><b>Hola, soy</b> <span class="inicio__title--highlight">Andryus</span></h1> 
+            <h2 class="inicio__subtitulo">Ingeniero Informático & Desarrollador Web</h2>
+            <p class="inicio__descripcion">Creador de soluciones innovadoras que transformen ideas en realidad digital</p>
+            <div class="contenedor__botones">
+                <button class="botoninicio__contenedor proyectos">Ver Proyectos</button>
+                <button class="botoninicio__contenedor contactar">Contactar</button>
+            </div>
         </div>
         <div class="inicio__contenedor-imagen">
             <div class="inicio__contenedor-imagen--imagen">
-
+                <img src="{% static 'image/Andryus.png' %}" alt="Andryus Guaiquirima" class="inicio__imagen">
             </div>
         </div>
     </div>
+    <a href="#about" class="hero__scroll" aria-label="Desplazarse hacia abajo">
+                <i class="fas fa-chevron-down"></i>
+            </a>
 </section>
