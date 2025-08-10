@@ -44,10 +44,25 @@ body {
     gap: var(--space-lg);
 }
 
+.logo_andryusdev {
+    width: auto;
+    height: 75px;
+    transition: transform 0.3s ease;
+}
+
+.logo_andryusdev:hover {
+    transform: scale(1.1);
+}
+
 .header__brand {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--color-primary);
+    display: flex;
+    height: 100%;
+    width: auto;
+    justify-content: center;
+    align-items: center;
 }
 
 .navbar__menu-iten:hover, .fa-bars:hover {
