@@ -90,6 +90,20 @@ body {
     gap: var(--space-lg);
 }
 
+.navbar__overlay {
+    position: fixed;
+    top: 75px; /* Desde el borde inferior del header */
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 75px); /* Altura restante */
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
+    z-index: 998; /* Debajo del menú (1001) y header (1000) */
+    opacity: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    pointer-events: none;
+}
+
 /* Estilos para móvil */
 @media (max-width: 768px) {
     .navbar__toggle {
@@ -102,11 +116,10 @@ body {
 
     .navbar__menu-contenedor {
         position: fixed;
-        top: 75px;
+        top: 0px;
         right: -100%; /* Inicialmente oculto (70% de ancho) */
-        width: 100%; /* Ancho del panel */
-        height: auto;
-        max-height: calc(100vh - 75px); /* Máximo alto disponible */
+        width: 45%; /* Ancho del panel */
+        height: 100vh;
         background: var(--color-white);
         flex-direction: column;
         gap: 1.5rem;
@@ -115,21 +128,20 @@ body {
         box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
         align-items: center;
         padding: 1rem 0; /* Padding reducido */
-        z-index: 1000; /* Debajo del botón pero sobre otros elementos */
+        z-index: 1001; /* Debajo del botón pero sobre otros elementos */
     }
     
     .navbar__menu-contenedor.active {
         right: 0; /* Se abre desde la derecha */
+        z-index: 1001;
+        pointer-events: auto; /* Permite clicks para cerrar el menú */
     }
-
-    /* Mueve el botón junto al panel abierto */
-    .navbar__menu-contenedor.active ~ .navbar__toggle {
-        right: 70%; /* Se desplaza a la izquierda junto al menú */
-        position: fixed; /* Permite reposicionarlo */
+    .header {
+        z-index: 1000;
     }
-
-    /* Gira el icono al abrir */
-    .navbar__menu-contenedor.active ~ .navbar__toggle i {
-        transform: rotate(90deg);
+    .navbar__overlay.active {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: visible;
     }
 }
