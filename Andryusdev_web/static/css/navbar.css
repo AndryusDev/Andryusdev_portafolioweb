@@ -38,11 +38,6 @@ body {
     background-color: var(--color-white);
 }
 
-.navbar__menu-contenedor {
-    list-style-type: none;
-    display: flex;
-    gap: var(--space-lg);
-}
 
 .logo_andryusdev {
     width: auto;
@@ -63,6 +58,16 @@ body {
     width: auto;
     justify-content: center;
     align-items: center;
+}
+
+.nav {
+    box-sizing: border-box;
+}
+
+.navbar__menu-iten{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
 }
 
 .navbar__menu-iten:hover, .fa-bars:hover {
@@ -107,7 +112,7 @@ body {
 }
 
 /* Estilos para móvil */
-@media (max-width: 768px) {
+@media (max-width: 868px) {
     .navbar__toggle {
         display: flex;
         align-items: center;
@@ -154,5 +159,23 @@ body {
         opacity: 1;
         visibility: visible;
         pointer-events: visible;
+    }
+}
+
+@media (max-width: 260px) {
+    .header {
+        min-height: 40px;
+        padding: 0.3rem 0.8rem;
+    }
+    
+    .header__brand {
+        font-size: 1rem;
+    }
+    .header__brand p {
+        display: none;
+    }
+    
+    .navbar__toggle {
+        font-size: 1.2rem;
     }
 }
