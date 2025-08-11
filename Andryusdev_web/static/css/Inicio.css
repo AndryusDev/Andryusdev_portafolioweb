@@ -69,10 +69,11 @@ span {
     border-radius: 5px;
     cursor: pointer;
     border: 2px solid transparent;
-    justify-content: space-around;
     align-items: center;
     transition: all 0.3s ease;
-
+    padding-left: 2rem; /* Añadido para margen izquierdo */
+    padding-right: 2rem; /* Añadido para margen derecho */justify-content: space-between;
+    /*justify-content: space-around;*/
 }
 
 .proyectos {

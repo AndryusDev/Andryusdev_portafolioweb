@@ -127,7 +127,7 @@ body {
         top: 0px;
         bottom: 0px;
         right: -100%; /* Inicialmente oculto (70% de ancho) */
-        width: 35%; /* Ancho del panel */
+        width: auto; /* Ancho del panel */
         height: 100%;
         min-width: 150px; /* Tamaño mínimo absoluto */
         background: var(--color-white);
@@ -141,7 +141,13 @@ body {
         z-index: 1001; /* Debajo del botón pero sobre otros elementos */
         overflow-y: auto;
     }
-    
+    .navbar__menu-iten{
+        display: flex;
+        justify-content: left;
+        gap: 1rem;
+        width: 100%;
+        
+    }
     .navbar__menu-contenedor.active {
         right: 0; /* Se abre desde la derecha */
         z-index: 1001;
