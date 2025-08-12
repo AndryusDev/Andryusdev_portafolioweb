@@ -31,6 +31,11 @@ main {
     background: linear-gradient(135deg, #F9FAFB 0%, #EFF6FF 100%);
     box-sizing: border-box;
     padding-top: 80px;
+    height: 100%;
+    overflow: hidden;
+    padding-left: 20px; /*añadiendo para que no se peguen a los border*/
+    padding-right: 20px; /*añadiendo para que no se peguen a los border*/
+    padding-bottom: 10px; /*añadiendo para que no se peguen a los border*/
 }
 
 .inicio__contenedor-texto {
@@ -128,7 +133,7 @@ span {
     z-index: 10;
     white-space: nowrap;
     transform: translateX(-50%);
-    bottom: 95%;
+    bottom: 332px;
     left: 70%;
     box-shadow: 0 0 15px 1px #0004;
 }
@@ -139,8 +144,13 @@ span {
 }
 
 @keyframes hologramAppear {
+    from {
+        opacity: 0;
+        transform: translateY(300px);
+    }
     to {
-        opacity: 0.95;
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
@@ -157,11 +167,11 @@ span {
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateX(-300px);
     }
     to {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateX(0);
     }
 }
 
