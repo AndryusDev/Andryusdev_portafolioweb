@@ -3,13 +3,15 @@
     <head>
         {% load static %}
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta >
         <link rel="stylesheet" href="{% static 'css/portafolio.css' %}">
         <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <link rel="stylesheet" href="{% static 'css/inicio.css' %}">
+        <link rel="stylesheet" href="{% static 'css/sobre_mi.css' %}">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+        <link rel="icon" href="{% static 'image/andryusdev2.png' %}">
         <title>Andryusdev | Ingeniero en Informatica</title>
         <meta name="description" content="Portafolio de Andryus Guaiquirima, desarrollador web especialista en con CSS y Django">
         <meta name="author" content="Andryus Guaiquirima">
@@ -21,6 +23,7 @@
         </header>
         <main>
             {% include 'includes/sections/inicio.html' %}
+            {% include 'includes/sections/sobre_mi.html' %}
         </main>
         <footer>
             

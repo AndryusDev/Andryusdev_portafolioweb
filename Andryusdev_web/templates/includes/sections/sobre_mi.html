@@ -1,8 +1,28 @@
+{% load static%}
 <section class="sobremi__contenedor">
-    <div class="">
-
+    <div class="sobremi__contenedor-titulo">
+        <h2 class="sobremi__titulo">Sobre <span>Mi</span></h2>
+        <p class="sobremi__contenedor-descripcion">Conoce mas acerca de mi carrera profesional</p>
     </div>
-    <div class="">
+    <div class="sobremi__contenedor-desarrollo">
+        <div class="sobremi__contenedor-desarrollo-imagen">
+            <img src="{% static 'image/sobre_mi.jpeg' %}" alt="Andryus Trabaja" class="sobremi__contenedor-desarrollo-imagen-imagen">
+        </div>
+        <div class="sobremi_contenedor-desarrollo-texto">
+            <h3 class="sobremi_contenedor-desarrollo-subtitulo">Desarrollador apasionado con enfoque en soluciones eficientes</h3>
+            <p class="sobremi_contenedor-desarrollo-descripcion"> Recién culminado los estudios de Ingeníeria en Informática con especial interés en desarrollo web backend y frontend. Me enfoco en aplicaciones enficientes escalables y con buena experiencia de usuario</p>
+            <div class="sobremi_contenedor-desarrollo-experiencia">
+                <div class="sobremi_contenedor-desarrollo-experiencia-item">
+                    <span class="sobremi__experience-numero">1+</span>
+                            <span class="sobremi__experience-texto">Años de experiencia</span>
+                </div>
 
+                <div class="sobremi_contenedor-desarrollo-experiencia-item">
+                    <span class="sobremi__experience-numero">1+</span>
+                    <span class="sobremi__experience-texto">Proyectos completados</span>
+                </div>
+            </div>
+            <button class="sobremi__contenedor-desarrollo-boton">Descargar CV</button>
+        </div>
     </div>
 </section>
