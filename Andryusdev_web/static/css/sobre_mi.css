@@ -92,7 +92,7 @@
 .sobremi_contenedor-desarrollo-experiencia {
     display: flex;
     gap: 1.5rem;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
 
 }
 
@@ -101,9 +101,27 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    background-color: transparent;
-    box-shadow: 0 0 15px 1px #0001;
-    border-radius: 8px;
+    background: var(--color-white);
+    box-shadow: 0 10px 15px 1px #0001;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.sobremi_contenedor-desarrollo-experiencia-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+}
+
+.sobremi_contenedor-desarrollo-experiencia-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(37, 99, 235, 0.1);
 }
 
 .sobremi__experience-numero {
@@ -129,6 +147,8 @@
     margin-top: 20px;
 }
 
-.sobremi_contenedor-desarrollo-experiencia-item:hover {
-    transform: scale(1.10);
+.sobremi__contenedor-desarrollo-boton:hover {
+    background-color: var(--color-primary-dark);
+    transition: all ease 0.3s;
 }
+
