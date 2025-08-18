@@ -30,7 +30,7 @@ main {
     gap: 3rem;
     background: linear-gradient(135deg, #F9FAFB 0%, #EFF6FF 100%);
     box-sizing: border-box;
-    padding-top: 80px;
+    padding-top: 75px;
     height: 100%;
     overflow: hidden;
     padding-left: 20px; /*añadiendo para que no se peguen a los border*/
