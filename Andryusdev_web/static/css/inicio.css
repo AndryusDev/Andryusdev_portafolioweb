@@ -15,6 +15,11 @@
     --space-lg: 2rem;
 }
 
+html {
+  scroll-behavior: smooth;       /* Desplazamiento suave */
+  scroll-padding-top: 75px;     /* Compensación del header */
+}
+
 main {
     flex: 1;
     /*margin-top: 75px;*/ /* Compensa el header fijo */
