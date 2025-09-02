@@ -47,11 +47,11 @@
 
 .habilidades__contenedor-categorias {
     width: 100%;
-    height: auto;
-    padding: 20px 40px;
-    margin-top: 40px;
+    max-width: 1200px;
+    margin: 40px auto 20px;
+    padding: 0 20px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: var(--space-lg);
     box-sizing: border-box;
 }
@@ -94,12 +94,18 @@
     display: flex;
     justify-content: space-between;
     margin-top: 15px;
+    width: 100%;
+}
+
+.habilidades__contenedor-categorias-item {
+    width: 100%;
 }
 
 
 .habilidades__header {
     display: flex;
     justify-content: space-between;
+    width: 100%
 }
 
 .habilidades__nombre {
@@ -107,6 +113,7 @@
     font-weight: 600;
     font-size: 1.1rem;
     color: var(--color-black);
+    align-items: center;
 }
 
 .habilidades__icono {
