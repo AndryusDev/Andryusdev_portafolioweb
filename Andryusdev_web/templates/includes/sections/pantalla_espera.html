@@ -1,0 +1,35 @@
+{% load static %}
+<section class="pantalla_espera__contenido">
+    <div class="preloader" id="preloader">
+        <div class="logo-container">
+            <div class="logo-outer"></div>
+            <div class="logo-inner"></div>
+            <div class="logo-icon">
+                <img src="{% static 'image/andryusdev_logo2.png' %}" alt="AndryusDev Logo">
+            </div>
+        </div>
+        <h2 class="developer-name">AndryusDev</h2>
+        <p class="developer-title">Ingeniero Informático & Desarrollador Web</p>
+        <div class="loading-bar">
+            <div class="loading-progress" id="loading-progress"></div>
+        </div>
+        <p class="loading-text">Cargando portfolio<span class="loading-dots"></span></p>
+
+
+
+    </div>
+</section>
+
+<script>
+        // Script de demostración para reiniciar animaciones
+        document.addEventListener('DOMContentLoaded', function() {
+            const preloader = document.querySelector('.preloader-demo');
+            
+            // Reiniciar animaciones cada 10 segundos para demostración
+            setInterval(() => {
+                preloader.style.animation = 'none';
+                preloader.offsetHeight; // Trigger reflow
+                preloader.style.animation = null;
+            }, 10000);
+        });
+    </script>
