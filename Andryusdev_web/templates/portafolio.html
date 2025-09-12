@@ -51,6 +51,37 @@
             }, 10000);
         });
     </script>
+    <script>
+    // Función para ocultar el preloader cuando la página esté completamente cargada
+    window.addEventListener('load', function() {
+        const preloader = document.getElementById('preloader');
+        const loadingProgress = document.getElementById('loading-progress');
+        
+        // Simular progreso de carga (opcional)
+        let progress = 0;
+        const interval = setInterval(() => {
+            progress += Math.random() * 15;
+            if (progress >= 100) {
+                progress = 100;
+                clearInterval(interval);
+                
+                // Completar la barra de progreso
+                loadingProgress.style.width = '100%';
+                
+                // Ocultar el preloader después de un breve retraso
+                setTimeout(() => {
+                    preloader.classList.add('hidden');
+                    
+                    // Mostrar el contenido principal
+                    document.querySelector('.page-content').classList.add('visible');
+                }, 500);
+            } else {
+                // Actualizar la barra de progreso
+                loadingProgress.style.width = progress + '%';
+            }
+        }, 200);
+    });
+</script>
         <script src="{% static 'javascript/navbar.js' %}"></script>
         
     </body>
